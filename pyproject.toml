@@ -1,0 +1,52 @@
+[project]
+name = "autoactive"
+authors = [
+    {name = "Adam Pirog"},
+    {email = "pirog.adam@gmail.com"},
+]
+description = "Stay active all the time!"
+readme = "README.md"
+license = { text="MIT" }
+dynamic = ["version"]
+requires-python = ">=3.11"
+dependencies = [
+    "pyautogui >= 0.9.54, <1.0.0"
+    ]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "isort",
+    "black",
+    "pylint"
+    ]
+
+[build-system]
+requires = ["setuptools>=60.0.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.distutils.bdist_wheel]
+universal = true
+
+[tool.setuptools]
+packages = ["autoactive"]
+
+[tool.setuptools.dynamic]
+version = {attr = "autoactive.version.__version__"}
+
+[project.scripts]
+autoactive = "autoactive.__main__:cli"
+
+[tool.black]
+line-length = 79
+target-version = ["py311"]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra"
+testpaths = ["tests"]
+
+[tool.isort]
+profile = "black"
+line_length = 79
+lines_after_imports = 2
