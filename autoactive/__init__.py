@@ -1,3 +1,6 @@
+from .wayland_patch import patch_wayland
+patch_wayland()
+
 from .autoactive import main_loop
 from .version import __version__
 

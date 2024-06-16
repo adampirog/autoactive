@@ -6,6 +6,7 @@ and repeats this action in given interval.
 
 This way you can stay active on your communicator all the time! ;)
 """
+
 from argparse import ArgumentParser, Namespace, RawDescriptionHelpFormatter
 
 from .autoactive import main_loop

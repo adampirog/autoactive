@@ -3,12 +3,12 @@ from time import sleep
 import pyautogui
 
 
-def action(x: float, y: float):
+def action(x: float, y: float, duration: float = 3):
     """
     Moves mouse from one point to the other (3s duration).
     Presses alt at the end.
     """
-    pyautogui.moveTo(x, y, duration=3)
+    pyautogui.moveTo(x, y, duration=duration)
     pyautogui.press("alt")
 
 
