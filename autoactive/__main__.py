@@ -9,7 +9,7 @@ This way you can stay active on your communicator all the time! ;)
 
 from argparse import ArgumentParser, Namespace, RawDescriptionHelpFormatter
 
-from .autoactive import main_loop
+from autoactive import main_loop
 
 
 def parse_args() -> Namespace:
